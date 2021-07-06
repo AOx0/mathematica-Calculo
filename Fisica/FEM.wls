@@ -1,0 +1,41 @@
+#!/usr/bin/env wolframscript
+(* ::Package:: *)
+
+(* ::Input:: *)
+(*Remove["Global`*"]*)
+
+
+(* ::Input:: *)
+(*PrettyFEM[ x_, expression_]:=( *)
+(*Print[Flatten@Solve[ToExpression[expression], x]];*)
+(*Return[Flatten@Solve[ToExpression[expression], x]]*)
+(*)*)
+(**)
+(*Hf[x_]:= ToExpression[x];*)
+(**)
+(*W[Vrpm_]:= ( *)
+(*Print["w = ",HoldForm[Vrpm/60 2 \[Pi]]];*)
+(*Print["w = ",Vrpm/60 2 \[Pi]  ];*)
+(*Print["w = ",N[Vrpm/60 2 \[Pi]]  ];*)
+(*Print["----------------"];*)
+(*Return[N[Vrpm/60 2 \[Pi]]];*)
+(*);*)
+(**)
+(*FEM[  e_(* FEM [V] *), n_(* N vueltas *),b_ (* Flujo necesario (T) *), a_ (* Area (m^2) *), w_ (* rpm -> Rad/s *)]:= ( *)
+(*exp := "e == n b a w";*)
+(*f = {};*)
+(*Print[exp];*)
+(**)
+(*If[e==x, f= PrettyFEM[Hf["e"], exp]; e=Hf["e"]];*)
+(*If[n==x,f=  PrettyFEM[Hf["n"], exp]; n=Hf["n"]];*)
+(*If[b==x,f=  PrettyFEM[Hf["b"], exp]; b=Hf["b"]];*)
+(*If[a==x, f= PrettyFEM[Hf["a"], exp]; a=Hf["a"]];*)
+(*If[w==x,f=  PrettyFEM[Hf["w"], exp]; w=Hf["w"]];*)
+(*Print[ f[[1]] /.Hf["e"]->StringForm["(``)", ToString[e]] /.  Hf["n"]->StringForm["(``)",ToString[n]] /.Hf["b"]-> StringForm["(``)",ToString[b]]/. Hf["a"]-> StringForm["(``)",ToString[a]]/. Hf["w"]->StringForm["(``)",ToString[ w]]];*)
+(*Print[Reduce[e==n b a w, x]];*)
+(*Print[N[Reduce[e==n b a w, x]]];*)
+(*)*)
+(*FEM[12, 400,x, 0.012, W[314]]*)
+
+
+
